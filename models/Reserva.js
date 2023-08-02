@@ -8,7 +8,7 @@ const Reserva = sequelize.define(
   "Reserva",
   {
     moviename: {
-        type: DataTypes.STRING(50),
+        type: DataTypes.STRING(90),
         allowNull: false,},
     moviedate:{
         type: DataTypes.DATE,

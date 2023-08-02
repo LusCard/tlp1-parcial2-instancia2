@@ -9,6 +9,7 @@ const app = express();
 
 //variables de entorno
 dotenv.config({ path: ".env" });
+const { sequelize } = require('./database/database');
 
 //motor de plantillas
 app.set("views", path.join(__dirname, "views"));
@@ -29,6 +30,13 @@ app.use(express.json());
 //dirección de archivos estáticos
 app.use(express.static(path.join(__dirname, 'public')));
 
+//instancia de conexión con base de datos
+sequelize.authenticate()
+  .then(() => {   
+    console.log('Conexión a base de datos exitosa');
+ })
+  .catch((error) => console.log('Error al conectar a base de datos', error));
+  
 // Routes
 app.use(require('./routes/reserva.routes'));
 

@@ -1,0 +1,30 @@
+<%- include('../partials/header') %>
+
+  <div class="container">
+
+    <div class="row mt-5">
+      <h1 class="text-center border-botton">Reserva</h1>
+      <form class="col-5" action="#" id="updateReservaForm"  data-id="<%= id  %>">
+        <div class="mb-3">
+            <label for="fullname" class="form-label">Nombre Completo</label>
+            <input type="text" class="form-control" name="fullname" id="fullname"
+                placeholder="Ingrese el nombre de la persona que reserva">
+        
+        </div>
+        <div class="mb-3">
+            <label for="code" class="form-label">Código de Reserva</label>
+            <input type="text" class="form-control" name="code" id="code" placeholder="Ingrese el código de la reserva">
+        </div>
+        <div class="mb-3">
+            <label for="date" class="form-label">Fecha de Reserva</label>
+            <input type="date" class="form-control" name="date" id="date" placeholder="Ingrese la fecha de la reserva">
+        </div>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <button type="button" class="btn btn-danger" id="cancelar">Cancelar</button>
+      </form>
+    </div>
+  </div>
+  <script src="/reservas/edit.js"></script>
+
+
+  <%- include('../partials/footer') %>

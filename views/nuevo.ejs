@@ -15,16 +15,30 @@
             <label for="code" class="form-label">Código de Reserva</label>
             <input type="text" class="form-control" name="code" id="code" placeholder="Ingrese el código de la reserva">
         </div>
+
+      <div class="mb-3">
+        <label for="moviename" class="form-label">Nombre de la pelicula</label>
+        <input type="text" class="form-control" name="moviename" id="moviename" placeholder="Ingrese el nombre de la película">
+      </div> <div class="mb-3">
+        <label for="moviedate" class="form-label">Fecha de la pelicula</label>
+        <input type="date" class="form-control" name="moviedate" id="moviedate" placeholder="Ingrese la fecha de la película>
+      </div> <div class="mb-3">
+        <label for="price" class="form-label">Precio de la pelicula</label>
+        <input type="number" class="form-control" name="price" id="price" placeholder="Ingrese el precio de la película">
+      </div>
         <div class="mb-3">
             <label for="date" class="form-label">Fecha de Reserva</label>
             <input type="date" class="form-control" name="date" id="date" placeholder="Ingrese la fecha de la reserva">
         </div>
+
+
+
         <button type="submit" class="btn btn-primary">Guardar</button>
         <button type="button" class="btn btn-danger" id="cancelar">Cancelar</button>
       </form>
     </div>
   </div>
-  <script src="/reservas/store.js"></script>
+  <script src="/public/crear-reserva.js"></script>
 
 
   <%- include('./partials/footer') %>
